@@ -213,21 +213,20 @@ let pondScope = ['duck', 'realDuck'];
 
   //Code Here
   
-function outerFn(func){
-  return func();
-}
-var name = function(){
-  return "Mira Jones";
+function outerFn(){
+  var name = function(){
+    return "Mira Jones";
+  }
+  return name;
 };
 
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
-var innerFn = outerFn(name);
+var innerFn = outerFn();
   
 
 //Now invoke innerFn and save the result to a variable called finalResult.
 
   //Code Here
 var finalResult = innerFn;
-  
