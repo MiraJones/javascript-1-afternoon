@@ -53,10 +53,18 @@ var finalGreeting = ((name) => "Hello, " + name);
   
 function doubleCheck(arr){
   if(arr.includes("chocolate")===false){
-    arr[0] = "chocolate";
+    arr.push("chocolate");
   }
   return arr;
 };
+// function doubleCheck(arr) {
+//   for (var i=0; i<arr.length; i++){
+//     if(arr[i]==="chocolate"){
+//       return arr;
+//     }
+//   }
+//   arr.push("chocolate")
+// }
 
 
 //////////////////PROBLEM 5////////////////////  
@@ -113,6 +121,7 @@ var ruff = dog.bark();
 function looper(arr){
   mySum = 0;
   for(var i=0; i<arr.length; i++){
+    //if(arr[i] % 2 !== 0 || arr[i] >= 100)
     if(arr[i] % 2 !== 0){
       mySum += arr[i];
     }
@@ -194,7 +203,7 @@ let globalScope = ['duck'];
 
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = ['duck', 'rubberDuck', 'sailorDuck'];
+let bathroomScope = ['duck', 'rubberDuck'];
 
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
@@ -212,7 +221,11 @@ let pondScope = ['duck', 'realDuck'];
 //function which returns your name.
 
   //Code Here
-  
+// function outerFn(){
+//   return function(){
+//     return "Mira Jones"
+//   }
+// }
 function outerFn(){
   var name = function(){
     return "Mira Jones";
