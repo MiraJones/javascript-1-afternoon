@@ -229,4 +229,4 @@ var innerFn = outerFn();
 //Now invoke innerFn and save the result to a variable called finalResult.
 
   //Code Here
-var finalResult = innerFn;
+var finalResult = innerFn();
