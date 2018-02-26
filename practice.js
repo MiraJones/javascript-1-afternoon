@@ -53,7 +53,7 @@ var finalGreeting = ((name) => "Hello, " + name);
   
 function doubleCheck(arr){
   if(arr.includes("chocolate")===false){
-    arr += "chocolate";
+    arr[0] = "chocolate";
   }
   return arr;
 };
@@ -194,11 +194,11 @@ let globalScope = ['duck'];
 
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = ['duck', 'sailorDuck', 'rubberDuck'];
+let bathroomScope = ['duck', 'rubberDuck', 'sailorDuck'];
 
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = ['duck', 'sailorDuck'];
+let bathtubScope = ['duck', 'sailorDuck', 'rubberDuck'];
 
 
 //This array should contain the variable names (as strings) accessible in the pond function.
@@ -216,7 +216,7 @@ let pondScope = ['duck', 'realDuck'];
 function outerFn(){
   var name = function(){
     return "Mira Jones";
-  }
+  };
   return name;
 };
 
